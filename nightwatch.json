@@ -1,0 +1,34 @@
+{
+  "src_folders" : ["lib"],
+  "custom_assertions_path" : "test/assertions/",
+  "selenium" : {
+	"start_process" : false,
+    "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.43.1.jar",
+	"log_path" : "",
+	"host" : "127.0.0.1",
+	"port" : 4444,
+	"cli_args" : {
+	  "webdriver.chrome.driver" : "",
+	  "webdriver.ie.driver" : "",
+	  "webdriver.firefox.profile" : ""
+	}
+  },
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4444,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities" : {
+        "browserName" : "firefox",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+      }
+    }
+}
+}

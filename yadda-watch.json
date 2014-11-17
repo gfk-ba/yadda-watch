@@ -1,0 +1,6 @@
+{
+    "features_path": "test/features/**/*.feature",
+    "stepdefs_path": "test/stepdefs/**/*.js",
+    "views_path": "test/views/**/*.json",
+    "yadda_language": "English"
+}

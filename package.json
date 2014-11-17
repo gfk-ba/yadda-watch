@@ -1,0 +1,13 @@
+{
+  "name": "yadda-watch",
+  "description": "Nightwatch with yadda taped on",
+  "version": "0.0.1",
+  "devDependencies": {
+    "glob": "^4.0.6",
+    "nightwatch": "^0.5.33",
+    "phantomjs": "^1.9.12",
+    "selenium-server-standalone-jar": "^2.40.0",
+    "underscore": "^1.7.0",
+    "yadda": "^0.11.2"
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "search box": "#search_form_input_homepage",
+    "search button": "#search_button_homepage",
+    "page": "body"
+}
