@@ -13,3 +13,4 @@ Feature: DuckDuckGo Demo
     Then the title should be DuckDuckGo
     And I should see a search box
     And I should see a search button
+    And I should see a #logo_homepage_link
