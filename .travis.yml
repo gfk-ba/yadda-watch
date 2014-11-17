@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.10'
+before_install: 
+branches:
+  only:
+  - master
+env:
+  global:
+  - secure: ZyEv4PfebcIExDlupGGnnL/tRN1Qt66jG/BzyzHBxtPd83LM/8wCPt//exGFTgsewKvuYzYRepebEZlHrclxv/tvjqIxkMCTSNO4xqSIved0pIN1xqxh3wNko2TagyQuZx56ndTTnU2SBXTG5ed/1j383jVEczw4t5B9Z78Tybc=
+  - secure: rzGOCn0xMYo9iWYQ+QDhYqmBfPucz4yWN6Ky0dRrF0EVS7mOvqIDZPwKqSGsFjO0o/EPPRtfSkLuvHVn/KivZLBlEc1L8UK4gXskzNFPXL15cUjwvAdnwutyhuMebx66xjdRHEf0dTx0GINuKqLpu3cvP71ypPjD4KMqQCmQE4g=
+script:
+- "./run_nightwatch.sh -e browserstack"
