@@ -1,4 +1,4 @@
-module.exports.using = function (library, context) {
+module.exports = function (library, context) {
     library
             .when("I open $URL", function(url) {
                 this.browser.url(url)
