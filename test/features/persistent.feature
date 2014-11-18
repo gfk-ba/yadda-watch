@@ -3,7 +3,7 @@ Feature: Persistent Session Demo
 
   Scenario: Persistent DuckDuckGo home page
 
-    When I open http://duckduckgo.com
+    When I open the test enviroment
     Then the title should be DuckDuckGo
     When I type foobar in the search box
 

@@ -1,7 +1,10 @@
 module.exports = function (library, context) {
     library
+            .when("I open the test enviroment", function () {
+                this.browser.url(this.browser.launch_url);
+            })
             .when("I open $URL", function(url) {
-                this.browser.url(url)
+                this.browser.url(url);
             })
             .then("the title should be $TITLE", function(title){
                 this.browser.assert.title(title, '')

@@ -2,7 +2,7 @@ Feature: DuckDuckGo Demo
 
   Scenario: DuckDuckGo home page
 
-    When I open http://duckduckgo.com
+    When I open the test enviroment
     Then the title should be DuckDuckGo
      And I should see a search box
      And I should see a search button
@@ -10,7 +10,7 @@ Feature: DuckDuckGo Demo
 
   Scenario: Google home page Part II
 
-    When I open http://duckduckgo.com
+    When I open the test enviroment
     Then the title should be DuckDuckGo
      And I should see a search box
      And I should see a search button
@@ -19,7 +19,7 @@ Feature: DuckDuckGo Demo
 @broken
 Scenario: Google home page Part III
 
-    When I open http://duckduckgo.com
+    When I open the test enviroment
     Then the title should be DuckDuckGo
      And I should see a search box
      And I should see a search button
