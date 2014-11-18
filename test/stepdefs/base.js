@@ -7,12 +7,12 @@ module.exports = function (library, context) {
                 this.browser.url(url);
             })
             .then("the title should be $TITLE", function(title){
-                this.browser.assert.title(title, '')
+                this.browser.assert.title(title);
             })
             .then("I should see a $element", function (element) {
                 var elementSelector = context.getElementFromView(element);
 
-                this.browser.assert.elementPresent(elementSelector)
+                this.browser.assert.elementPresent(elementSelector);
             })
             .then("I should see $text in the $element", function (text, element) {
                 var elementSelector = context.getElementFromView(element);
