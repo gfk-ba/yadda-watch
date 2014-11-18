@@ -22,5 +22,5 @@ module.exports = function (library, context) {
                         .pause(500)
                         .setValue(elementSelector, text.split(''));
 
-            })
+            });
 };
