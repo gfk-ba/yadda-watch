@@ -20,7 +20,4 @@ Feature: DuckDuckGo Demo
 Scenario: Google home page Part III
 
     When I open the test enviroment
-    Then the title should be DuckDuckGo
-     And I should see a search box
-     And I should see a search button
-     And I should see a #logo_homepage_link
+    Then I should see flying unicorns
