@@ -1,7 +1,7 @@
 {
   "src_folders" : ["lib"],
-  "custom_assertions_path" : "test/assertions/",
-  "custom_commands_path": "test/commands/",
+  "custom_assertions_path" : "custom/assertions/",
+  "custom_commands_path": "custom/commands/",
   "selenium" : {
 	"start_process" : false,
     "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.43.1.jar",
