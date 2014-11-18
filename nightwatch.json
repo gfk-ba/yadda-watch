@@ -31,6 +31,22 @@
         "acceptSslCerts" : true
       }
     },
+    "phantomjs" : {
+      "launch_url" : "http://duckduckgo.com",
+      "selenium_host" : "127.0.0.1",
+      "selenium_port" : 4444,
+      "silent" : true,
+      "disable_colors": false,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities" : {
+        "browserName" : "phantomjs",
+        "javascriptEnabled" : true,
+        "acceptSslCerts" : true
+      }
+    },
     "browserstack" : {
       "selenium" : {
           "start_process" : false
