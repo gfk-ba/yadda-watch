@@ -3,12 +3,16 @@
   "description": "Nightwatch with yadda taped on",
   "version": "0.0.1",
   "dependencies": {
-      "glob": "^4.0.6",
-      "nightwatch": "^0.5.33",
-      "underscore": "^1.7.0",
-      "yadda": "^0.11.2"
+    "chai": "^1.10.0",
+    "glob": "^4.0.6",
+    "selenium-webdriver": "^2.44.0",
+    "underscore": "^1.7.0",
+    "webdriverio": "^2.3.0",
+    "webdriverjs": "^1.7.5",
+    "yadda": "^0.11.2"
   },
   "devDependencies": {
+    "chai": "^1.10.0",
     "selenium-server-standalone-jar": "^2.40.0"
   }
 }
