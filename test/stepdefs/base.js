@@ -5,47 +5,59 @@ var expect = chai.expect;
 var Steps = {
 	using: function(library, ctx) {
         library
-                .when("I open the test enviroment", function (next) {
-                    ctx.driver.get('http://www.duckduckgo.com').then(function () {
-                        next();
+                .when("I open the test enviroment", function () {
+                    var self = this;
+                    this.driver.get('http://www.duckduckgo.com').then(function () {
+                        self.done();
                     });
 
                 })
-                .when("I open $URL", function(url, next) {
-                    ctx.driver.get(url).then(function () {
-                        next();
+                .when("I open $URL", function(url) {
+                    var self = this;
+                    this.driver.get(url).then(function () {
+                        self.done();
                     });
                 })
-                .then("the title should be $TITLE", function(expected, next){
-                    ctx.driver.getTitle().then(function(title) {
+                .then("the title should be $TITLE", function(expected){
+                    var self = this;
+                    this.driver.getTitle().then(function(title) {
                         expect(expected).to.equal(title);
-                        next();
+                        self.done();
                     });
                 })
-                .then("I should see a $element", function (element, next) {
-                    next();
+                .then("I should see a $element", function (element) {
+                    var self = this;
+                    self.done();
 
                 })
-                .then("I should see $text in the $element", function (expected, element, next) {
+                .then("I should see $text in the $element", function (expected, element) {
                     var elementSelector = ctx.getElementFromView(element);
-                    ctx.driver.findElement(webdriver.By.css(elementSelector)).getText().then(function(text) {
+                    var self = this;
+                    this.driver.findElement(webdriver.By.css(elementSelector)).getText().then(function(text) {
         				expect(text).to.contain(title);
-        				next();
+        				self.done();
         			});
                 })
-                .when('I type $text in the $element', function (text, element, next) {
+                .when('I type $text in the $element', function (text, element) {
                     var elementSelector = ctx.getElementFromView(element),
-                        webElement = ctx.driver.findElement(webdriver.By.css(elementSelector));
+                        webElement = this.driver.findElement(webdriver.By.css(elementSelector));
+                    var self = this;
 
                     webElement
                         .click()
                         .then(function () {
                             webElement.sendKeys(text).then(function() {
-                                ctx.driver.sleep(5000).then(function () {next();})
+                                self.driver.sleep(5000).then(function () {self.done();})
                             });
                         });
 
 
+                })
+                .then('I close the browser', function () {
+                    var self = this;
+                    this.driver.quit().then(function () {
+                        self.done();
+                    });
                 });
 
 	}
